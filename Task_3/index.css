@@ -1,17 +1,20 @@
 .container{
-    display: flex;
-    width: 100%;
-    height: auto;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0;
+    margin: auto;
     padding: 0;
     box-sizing: border-box;
 }
+.column-2{
+    display: flex;
+    width: 80%;
+    height: auto;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
 .article-wrapper{
-    width: 40vw;
-    height: 55vw;
-    margin: 3vw 3.5vw;
+    width: 26vw;
+    height: 36vw;
+    margin: 1.5vw 1.8vw;
     border-radius: 20px;
     box-shadow: 5px 5px 15px rgb(161, 158, 158);
     -webkit-transition: all 0.7s ease; transition: all 0.7s ease;
@@ -31,7 +34,7 @@
 .title{
     display: block;
     text-align: center;
-    font-size: 2.4vw;
+    font-size: 1.8vw;
     cursor: pointer;
     font-family: 'Montserrat', sans-serif;
     font-weight:300 ;
@@ -43,7 +46,7 @@
 .date{
     text-align: center;
     opacity: 0.4;
-    font-size: 1.1vw;
+    font-size: 0.8vw;
     font-family: inherit;
     font-style: normal;
     letter-spacing: normal;
@@ -51,20 +54,20 @@
 .content{
     display: block;
     text-align: center;
-    font-size: 1.8vw;
-    margin: 0.8vw;
+    font-size: 0.9vw;
+    margin: 0.6vw;
     font-family: 'Cormorant Garamond', serif;
 }
 .rm{
     width: fit-content;
     border-bottom: solid black 1px;
     font-style: italic;
-    padding: 0.7vw 0.8vw;
+    padding: 0.5vw 0.8vw;
     display: block;
     margin: auto;
     font-weight: 500;
     border-color:rgb(158 152 152 / 46%);
-    font-size: 1.2vw;
+    font-size: 1vw;
     cursor: pointer;
 }
 .rm:hover{
@@ -76,7 +79,7 @@
 }
 .article__buttons--wrapper div{
     margin-right: 10px;
-    font-size: 1.1vw;
+    font-size: 1vw;
     cursor: pointer;
     font-family: 'Karla', sans-serif;
 }
@@ -86,4 +89,12 @@
 .article__buttons--wrapper i{
     color: black;
     margin-right: 3px;
+}
+
+.column-3{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    height: auto;
+    justify-content: center;
 }
