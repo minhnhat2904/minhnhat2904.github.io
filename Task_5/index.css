@@ -374,7 +374,7 @@ body {
   position: relative;
 }
 .song:hover{
-  background-color:#2e263979;
+  background-color:#2e26399f;
   border-radius: 5px;
 }
 .song-wrapper{
