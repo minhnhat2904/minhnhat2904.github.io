@@ -47,6 +47,12 @@ body{
     color: #86888f;
     cursor: pointer;
 }
+.wrap-icon-social-media i:hover{
+    color: #3842d3;
+}
+.wrap-icon-social-media img:hover{
+    background-color: #3842d3;
+}
 .theme-switch{
     position: absolute;
     width: 65px;

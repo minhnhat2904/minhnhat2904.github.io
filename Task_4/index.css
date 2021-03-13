@@ -254,13 +254,15 @@
     font-weight: 600;
     color: #65676B;
     cursor: pointer;
-    border: none;
+    border: solid rgba(0, 0, 0, 0) 3px;
+    
     background-color: white;
     outline: none;
 }
 .menu-bottom--left span:hover{
     background-color: #f0f2f5;
     border-radius: 6px;
+    border: none;
 }
 .menu-bottom--left button:focus{
     border-bottom: solid #1876f2 3px;
