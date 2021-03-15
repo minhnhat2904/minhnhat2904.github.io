@@ -3,6 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link
+      rel="icon"
+      href="http://shift-cv.themerex.net/wp-content/uploads/2018/06/cropped-favicon-295x295.jpg"
+      sizes="192x192"
+    />
     <link rel="stylesheet" href="fontawesome-free-5.15.2-web/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link
@@ -10,16 +16,20 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="index.css" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap" rel="stylesheet">
+    <title>ShiftCV &#8211; Just another WordPress site</title>
   </head>
   <body>
     <div class="container">
       <div class="accent-line-top">
-        <div style="background-color: #f95656"></div>
-        <div style="background-color: #3a66e6"></div>
-        <div style="background-color: #1bc9e4"></div>
-        <div style="background-color: #ffc455"></div>
-        <div style="background-color: #ff754a"></div>
+        <div style="background-color: var(--red-color)"></div>
+        <div style="background-color: var(--blue-color)"></div>
+        <div style="background-color:var(--aqua-color)"></div>
+        <div style="background-color: var(--yellow-color)"></div>
+        <div style="background-color: var(--orange-color)"></div>
       </div>
       <div class="cover-icon-social-media">
         <div class="cover-padding-icon-social-media">
@@ -43,21 +53,85 @@
       <div class="cover-content">
         <div class="wrap-content">
           <div class="accordionposts">
-            <div class="img-user">
-              <img src="image/avatar_goku.jpeg" alt="" />
+            <div class="accordionposts-wrap" id="accordionposts-wrap">
+              <div class="img-user">
+                <img
+                  src="http://shift-cv.themerex.net/wp-content/uploads/elementor/thumbs/avatar-copyright-ozvzv766c6cur4djw0xxykehfn44d8cj1zznw7iba4.png"
+                  alt=""
+                />
+              </div>
+              <div class="name-user-job">
+                <h1>Kylie Jefferson</h1>
+                <p><strong>Graphic Designer — ThemeREX Team </strong></p>
+              </div>
+              <div class="icon-user-drop-down">
+                <i class="fas fa-caret-down"></i>
+              </div>
             </div>
-            <div class="name-user-job">
-              <h1>Son GoKu</h1>
-              <p><strong>Graphic Designer — ThemeREX Team </strong></p>
-            </div>
-            <div class="icon-user__left">
+            <button class="icon-user__left" id="button__left__1">
               <i class="far fa-user"></i>
-            </div>
-            <div class="icon-user__right">
+            </button>
+            <button class="icon-user__right">
               <i class="fas fa-pen"></i>
+            </button>
+            
+          </div>
+          <div class="profile-user">
+            <div class="profile-subtitle">
+              <button class="btn-profile">Profile</button>
+              <i class="fas fa-caret-up"></i>
             </div>
-            <div class="icon-user-drop-down">
-              <i class="fas fa-caret-down"></i>
+            <div class="user__info">
+              <div class="user__name-avatar">
+                <div class="user__avatar">
+                  <img
+                    src="http://shift-cv.themerex.net/wp-content/uploads/elementor/thumbs/avatar-copyright-ozvzv766c6cur4djw0xxykehfn44d8cj1zznw7iba4.png"
+                    alt=""
+                  />
+                </div>
+                <div class="user__name">
+                  <h1>Kylie Jefferson</h1>
+                  <p>Graphic Designer — ThemeREX Team</p>
+                </div>
+              </div>
+              <div class="user__contact">
+                <div class="user__contact__name">
+                  <span class="user__contact__left">Name:</span>
+                  <span class="user__contact__right">Kylie Jefferson</span>
+                </div>
+                <div class="user__contact__birthday">
+                  <span class="user__contact__left">Date of birth:</span>
+                  <span class="user__contact__right">June 6, 1990</span>
+                </div>
+                <div class="user__contact__address">
+                  <span class="user__contact__left">Address:</span>
+                  <span class="user__contact__right">San Francisco CA 94102 US</span>
+                </div>
+                <div class="user__contact__phone">
+                  <span class="user__contact__left">Phone:</span>
+                  <span class="user__contact__right color-orange">+1-800-123-4567</span>
+                </div>
+                <div class="user__contact__email">
+                  <span class="user__contact__left">Email</span>
+                  <span class="user__contact__right color-orange">info@example.com</span>
+                </div>
+                <div class="user__contact__website">
+                  <span class="user__contact__left">Website</span>
+                  <span class="user__contact__right color-orange">http://themerex.net</span>
+                </div>
+              </div>
+            </div>
+            <div class="user__introduce">
+              <p>
+                Welcome to my portfolio! I am a graphic designer at ThemeREX web
+                design studio. I am passionate about my job and my personal
+                contribution to the world of modern web design. Here, you will
+                be able to learn more about my projects as well as get to know
+                me as a person. I like nothing more than telling stories with
+                the help of photography, art and life experiences that celebrate
+                simplicity and creativity. Follow me on social media for regular
+                updates!
+              </p>
             </div>
           </div>
           <div class="resume">
@@ -98,8 +172,8 @@
           </div>
         </div>
         <div class="copyright">
-          <a href="#" style="margin-right: 2px;">ThemeREX </a>
-           © 2021. All Rights Reserved.
+          <a href="#" style="margin-right: 2px">ThemeREX </a>
+          © 2021. All Rights Reserved.
         </div>
       </div>
       <div class="cart">
@@ -112,5 +186,16 @@
         <i class="far fa-window-maximize"></i>
       </div>
     </div>
+    <script language="javascript">
+
+      document.getElementById("button__left__1").onclick = function () {
+          document.getElementById("accordionposts-wrap").style.display = 'none';
+      };
+
+      document.getElementById("button__left__1").onclick = function () {
+          document.getElementById("accordionposts-wrap").style.display = 'none';
+      };
+
+  </script>
   </body>
 </html>
