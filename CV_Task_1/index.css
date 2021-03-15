@@ -75,18 +75,19 @@ body{
 }
 .cover-content{
     width: 76%;
-    height: 500px;
+    height: auto;
     margin: auto;
     box-sizing: border-box;
     padding: 0 3vw;
 }
 .wrap-content{
     width: 100%;
+    height: auto;
     display: block;
 }
 .accordionposts{
     width: 100%;
-    height: 255px;
+    height: 252px;
     display: block;
     align-items: center;
     box-sizing: border-box;
@@ -96,7 +97,7 @@ body{
 }
 .accordionposts-wrap{
     width: 100%;
-    height: 100%;
+    height: auto;
     padding: 18px 46px;
     display: flex;
     align-items: center;
@@ -104,6 +105,9 @@ body{
     background-color: white;
     margin-bottom: 5px;
     position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .img-user{
@@ -186,6 +190,11 @@ body{
     width: 100%;
     height: auto;
     background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+    display: none;
 }
 .profile-subtitle{
     display: flex;

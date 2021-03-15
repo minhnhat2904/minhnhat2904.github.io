@@ -74,66 +74,67 @@
             <button class="icon-user__right">
               <i class="fas fa-pen"></i>
             </button>
+            <div class="profile-user" id="profile-user">
+              <div class="profile-subtitle">
+                <button class="btn-profile">Profile</button>
+                <i class="fas fa-caret-up"></i>
+              </div>
+              <div class="user__info">
+                <div class="user__name-avatar">
+                  <div class="user__avatar">
+                    <img
+                      src="http://shift-cv.themerex.net/wp-content/uploads/elementor/thumbs/avatar-copyright-ozvzv766c6cur4djw0xxykehfn44d8cj1zznw7iba4.png"
+                      alt=""
+                    />
+                  </div>
+                  <div class="user__name">
+                    <h1>Kylie Jefferson</h1>
+                    <p>Graphic Designer — ThemeREX Team</p>
+                  </div>
+                </div>
+                <div class="user__contact">
+                  <div class="user__contact__name">
+                    <span class="user__contact__left">Name:</span>
+                    <span class="user__contact__right">Kylie Jefferson</span>
+                  </div>
+                  <div class="user__contact__birthday">
+                    <span class="user__contact__left">Date of birth:</span>
+                    <span class="user__contact__right">June 6, 1990</span>
+                  </div>
+                  <div class="user__contact__address">
+                    <span class="user__contact__left">Address:</span>
+                    <span class="user__contact__right">San Francisco CA 94102 US</span>
+                  </div>
+                  <div class="user__contact__phone">
+                    <span class="user__contact__left">Phone:</span>
+                    <span class="user__contact__right color-orange">+1-800-123-4567</span>
+                  </div>
+                  <div class="user__contact__email">
+                    <span class="user__contact__left">Email</span>
+                    <span class="user__contact__right color-orange">info@example.com</span>
+                  </div>
+                  <div class="user__contact__website">
+                    <span class="user__contact__left">Website</span>
+                    <span class="user__contact__right color-orange">http://themerex.net</span>
+                  </div>
+                </div>
+              </div>
+              <div class="user__introduce">
+                <p>
+                  Welcome to my portfolio! I am a graphic designer at ThemeREX web
+                  design studio. I am passionate about my job and my personal
+                  contribution to the world of modern web design. Here, you will
+                  be able to learn more about my projects as well as get to know
+                  me as a person. I like nothing more than telling stories with
+                  the help of photography, art and life experiences that celebrate
+                  simplicity and creativity. Follow me on social media for regular
+                  updates!
+                </p>
+              </div>
+            </div>
             
           </div>
-          <div class="profile-user">
-            <div class="profile-subtitle">
-              <button class="btn-profile">Profile</button>
-              <i class="fas fa-caret-up"></i>
-            </div>
-            <div class="user__info">
-              <div class="user__name-avatar">
-                <div class="user__avatar">
-                  <img
-                    src="http://shift-cv.themerex.net/wp-content/uploads/elementor/thumbs/avatar-copyright-ozvzv766c6cur4djw0xxykehfn44d8cj1zznw7iba4.png"
-                    alt=""
-                  />
-                </div>
-                <div class="user__name">
-                  <h1>Kylie Jefferson</h1>
-                  <p>Graphic Designer — ThemeREX Team</p>
-                </div>
-              </div>
-              <div class="user__contact">
-                <div class="user__contact__name">
-                  <span class="user__contact__left">Name:</span>
-                  <span class="user__contact__right">Kylie Jefferson</span>
-                </div>
-                <div class="user__contact__birthday">
-                  <span class="user__contact__left">Date of birth:</span>
-                  <span class="user__contact__right">June 6, 1990</span>
-                </div>
-                <div class="user__contact__address">
-                  <span class="user__contact__left">Address:</span>
-                  <span class="user__contact__right">San Francisco CA 94102 US</span>
-                </div>
-                <div class="user__contact__phone">
-                  <span class="user__contact__left">Phone:</span>
-                  <span class="user__contact__right color-orange">+1-800-123-4567</span>
-                </div>
-                <div class="user__contact__email">
-                  <span class="user__contact__left">Email</span>
-                  <span class="user__contact__right color-orange">info@example.com</span>
-                </div>
-                <div class="user__contact__website">
-                  <span class="user__contact__left">Website</span>
-                  <span class="user__contact__right color-orange">http://themerex.net</span>
-                </div>
-              </div>
-            </div>
-            <div class="user__introduce">
-              <p>
-                Welcome to my portfolio! I am a graphic designer at ThemeREX web
-                design studio. I am passionate about my job and my personal
-                contribution to the world of modern web design. Here, you will
-                be able to learn more about my projects as well as get to know
-                me as a person. I like nothing more than telling stories with
-                the help of photography, art and life experiences that celebrate
-                simplicity and creativity. Follow me on social media for regular
-                updates!
-              </p>
-            </div>
-          </div>
+          
           <div class="resume">
             <span>Resume</span>
             <div class="icon-resume">
@@ -189,10 +190,12 @@
     <script language="javascript">
 
       document.getElementById("button__left__1").onclick = function () {
-          document.getElementById("accordionposts-wrap").style.display = 'none';
+          document.getElementById("accordionposts-wrap").style.display = 'block';
+          document.getElementById("profile-user").style.display = 'none';
       };
 
       document.getElementById("button__left__1").onclick = function () {
+          document.getElementById("profile-user").style.display = 'block';
           document.getElementById("accordionposts-wrap").style.display = 'none';
       };
 
