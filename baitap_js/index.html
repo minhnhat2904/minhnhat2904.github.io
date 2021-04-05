@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form method="POST" action="#" class="form__input" id="form__input" name="form_input" onsubmit="myFunction(event)">
+            <div class="fullname">
+                <label class="fullname__title">Fullname</label>
+                <input type="text" class="fullname__form-input" id="fullname__input" placeholder="Nhap ten cua ban">
+            </div>
+            <br>
+            <br>
+            <div class="age">
+                <label class="age__title">Age</label>
+                <input type="number" class="age__form-input" id="age__input" placeholder="Nhập tuoi tu 10-100">
+            </div>
+            <input type="submit" class="add" id="add" value="ADD">
+            </input>
+        </form>
+        <div class="space" style="height: 50px;"></div>
+        <ul id="list">
+            
+        </ul>
+        <div class="icon__doraemon">
+            <img src="/baitap_jss/main.png" alt="">
+        </div>
+        <div class="icon__nobita">
+            <img src="/baitap_jss/nobita, nobi icon.png" alt="">
+        </div>
+        <div class="icon__father">
+            <img src="/baitap_jss/nobisuke-nobi-father-icon.png" alt="">
+        </div>
+        <div class="icon__mother">
+            <img src="/baitap_jss/mother-tamako-nobi-icon.png" alt="">
+        </div>
+        
+    </div>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal_body" id="modal_body">
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" >OKE</button>
+         </div>
+         
+        </div>
+      
+      </div>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
