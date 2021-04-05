@@ -1,0 +1,109 @@
+body,html{
+    width: 100%;
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.background{
+    width: 100%;
+    height: 100%;
+    background-image: url("./image/abstract-water-hd.svg");
+    position: absolute;
+    z-index: 0;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+}
+.bubble{
+    position: absolute;
+    bottom: -60px;
+    background-color: rgba(255, 255, 255, 0.76);
+    border: solid 2px rgba(0, 255, 255, 0.582);
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: bubbleFly 10s infinite ease-in-out;
+}
+.bubble:nth-child(1){
+    width: 40px;
+    height: 40px;
+    left: 50%;
+    animation-duration: 8s;
+}
+.bubble:nth-child(2){
+    width: 20px;
+    height: 20px;
+    left: 20%;
+    animation-duration: 9s;
+    animation-delay: 5s;
+}
+.bubble:nth-child(3){
+    width: 50px;
+    height: 50px;
+    left: 10%;
+    animation-duration: 7s;
+    animation-delay: 5s;
+}
+.bubble:nth-child(4){
+    width: 30px;
+    height: 30px;
+    left: 30%;
+    animation-duration: 6s;
+    animation-delay: 2s;
+}
+.bubble:nth-child(5){
+    width: 60px;
+    height: 60px;
+    left: 40%;
+    animation-duration: 10s;
+    animation-delay: 4s;
+}
+.bubble:nth-child(6){
+    width: 20px;
+    height: 20px;
+    left: 60%;
+    animation-duration: 9s;
+    animation-delay: 3s;
+}
+.bubble:nth-child(7){
+    width: 30px;
+    height: 30px;
+    left: 70%;
+    animation-duration: 9s;
+    animation-delay: 2s;
+}
+.bubble:nth-child(8){
+    width: 50px;
+    height: 50px;
+    left: 80%;
+    animation-duration: 9s;
+    animation-delay: 3s;
+}
+.bubble:nth-child(9){
+    width: 20px;
+    height: 20px;
+    left: 20%;
+    animation-duration: 9s;
+    animation-delay: 4s;
+}
+.bubble:nth-child(10){
+    width: 20px;
+    height: 20px;
+    left: 20%;
+    animation-duration: 9s;
+    animation-delay: 2s;
+}
+@keyframes bubbleFly{
+    0%{
+        bottom: -60px;
+        transform: translateX(0);
+    }
+    50%{
+        transform: translateX(100px);
+    }
+    100%{
+        bottom: 800px;
+        transform: translateX(-200px);
+    }
+}

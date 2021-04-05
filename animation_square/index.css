@@ -1,0 +1,40 @@
+.container{
+    display: flex;
+    width: 280px;
+    margin: 50px auto;
+    justify-content: space-around;
+}
+.square1 {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    margin: 100px auto;
+    animation: square_flip_1 2s infinite ease-in-out;
+}
+  
+@keyframes square_flip_1 {
+    0% { 
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    } 50% { 
+      transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+    } 100% { 
+      transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    }
+}
+.square2 {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    margin: 100px auto;
+    animation: square_flip_2 2s infinite ease-in-out;
+}
+  
+@keyframes square_flip_2 {
+    0% { 
+      transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+    } 50% { 
+      transform: perspective(120px) rotateX(0deg) rotateY(-180deg);
+    } 100% { 
+      transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+    }
+}
