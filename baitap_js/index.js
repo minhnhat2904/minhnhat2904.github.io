@@ -6,7 +6,8 @@ var userArr = new Array();
 function myFunction(e) {
   // ngăn chặn load trang khi bấm submit
   e.preventDefault();
-  let fullname = document.getElementById("fullname__input").value;
+  let fullname = document.getElementById("fullname__input").value.trim().replace(/\s+/g, ' ');
+  console.log(fullname);
   let age = document.getElementById("age__input").value;
   var user = {
     FullName: fullname,
@@ -19,7 +20,6 @@ function myFunction(e) {
   if (fullname == "") {
     modal_body.innerHTML = "";
     modal_body.innerHTML += "<p>Chua nhap ten</p>";
-    console.log("abc");
   } else {
     if (check.test(fullname)) {
       modal_body.innerHTML = "";
