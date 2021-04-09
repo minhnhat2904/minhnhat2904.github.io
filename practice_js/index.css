@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    display: block;
+    width: 70%;
+    margin: auto;
+
+}
+.exercise{
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.ex__one{
+    height: auto;
+    border: solid 1px black;
+}
+#ex__one--date, #ex__one--time{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.ex__two div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+#ex__six__form__check input{
+    width: 40px;
+}
