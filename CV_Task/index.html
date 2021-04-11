@@ -97,11 +97,13 @@
             <div class="wrap--icon-user__left">
               <button class="icon-user__left" id="button__left__1">
                 <i class="far fa-user"></i>
+                <i class="far fa-user pseudo" ></i>
               </button>
             </div>
             <div class="wrap--icon-user__right">
               <button class="icon-user__right">
                 <i class="fas fa-pen"></i>
+                <i class="fas fa-pen pseudo-pen"></i>
                 <span class="icon-user__right--open-left">Blog</span>
               </button>
             </div>
@@ -179,6 +181,7 @@
             <div class="wrap-icon-resume">
               <button class="icon-resume" id="icon-resume">
                 <i class="fas fa-bars"></i>
+                <i class="fas fa-bars pseudo"></i>
               </button>
             </div>
             <div class="resume__title" id="resume__title">
@@ -461,13 +464,15 @@
                 <div class="wrap-icon-resume__print">
                   <button class="icon-resume__print" id="icon-resume__print">
                     <img src="./icon/printer.png" alt="">
+                    <img src="./icon/printer.png" alt="" class="pseudo">
                   </button>
                   <span class="icon-resume__print__hover">Print</span>
                 </div>
                 <div class="wrap-icon-resume__download">
                   <button class="icon-resume__download" id="icon-resume__download">
-                  <img src="./icon/down-arrow.png" alt="">
-                  <span class="icon-resume__download__hover">Download</span>
+                    <img src="./icon/down-arrow.png" alt="">
+                    <img src="./icon/down-arrow.png" alt="" class="pseudo">
+                    <span class="icon-resume__download__hover">Download</span>
                 </button>
                 </div>
               </div>
@@ -482,8 +487,9 @@
             </div>
           <div class="wrap-icon-portfolio">
             <button class="icon-portfolio" id="icon-portfolio">
-            <i class="fas fa-briefcase"></i>
-          </button>
+              <i class="fas fa-briefcase"></i>
+              <i class="fas fa-briefcase pseudo"></i>
+            </button>
           </div>
           <div class="portfolio-detail" id="portfolio-detail">
             <div id="portfolio-detail__title">
@@ -497,11 +503,11 @@
             <div class="portfolio-detail__wrap">
               <div class="wrap-portfolio-nav">
                 <ul class="portfolio-nav" id="portfolio-nav">
-                  <li class="filter-item active" onclick="geeksportal('all')">Show All</li>
-                  <li class="filter-item" onclick="geeksportal('web')">Web</li>
-                  <li class="filter-item" onclick="geeksportal('video')">Video</li>
-                  <li class="filter-item" onclick="geeksportal('photo')">Photo</li>
-                  <li class="filter-item" style="margin-right: 0px;" onclick="geeksportal('graphic')">Graphic</li>
+                  <li class="filter-item active" onclick="category('all')">Show All</li>
+                  <li class="filter-item" onclick="category('web')">Web</li>
+                  <li class="filter-item" onclick="category('video')">Video</li>
+                  <li class="filter-item" onclick="category('photo')">Photo</li>
+                  <li class="filter-item" onclick="category('graphic')" style="margin-right: 0px;">Graphic</li>
                 </ul>
               </div> 
               <div class="portfolio-image">
@@ -519,14 +525,14 @@
                     <div class="portfolio__subtitle"><span>Design, </span><span> Photography </span> <span> WordPress</span></div>
                   </div>
                 </div>
-                <div class="img mot video">
+                <div class="img mot video graphic">
                   <img src="http://shift-cv.themerex.net/wp-content/uploads/2018/06/post-5-copyright.jpg" alt="">
                   <div class="portfolio__img-background">
                     <h1>Citrus</h1>
                     <div class="portfolio__subtitle"><span>Design, </span><span> Lifestyle</span></div>
                   </div>
                 </div>
-                <div class="img mot web">
+                <div class="img mot web photo">
                   <img src="http://shift-cv.themerex.net/wp-content/uploads/2018/06/post-10-copyright.jpg" alt="">
                   <div class="portfolio__img-background">
                     <h1>Art</h1>
@@ -540,14 +546,14 @@
                     <div class="portfolio__subtitle"><span>Design, </span><span> Lifestyle</span></div>
                   </div>
                 </div>
-                <div class="img mot video">
+                <div class="img mot video graphic">
                   <img src="http://shift-cv.themerex.net/wp-content/uploads/2018/06/post-4-copyright.jpg" alt="">
                   <div class="portfolio__img-background">
                     <h1>Achitecture</h1>
                     <div class="portfolio__subtitle"><span>Design, </span><span> Project, </span><span>WordPress</span></div>
                   </div>
                 </div>
-                <div class="img mot web">
+                <div class="img mot web photo">
                   <img src="http://shift-cv.themerex.net/wp-content/uploads/2018/06/post-13-copyright.jpg" alt="">
                   <div class="portfolio__img-background">
                     <h1>Nature</h1>
@@ -561,42 +567,42 @@
                     <div class="portfolio__subtitle"><span>Design, </span><span> Photography, </span><span> WordPress</span></div>
                   </div>
                 </div>
-                <div class="img mot video">
+                <div class="img mot video graphic">
                   <img src="http://shift-cv.themerex.net/wp-content/uploads/2018/06/post-8-copyright.jpg" alt="">
                   <div class="portfolio__img-background">
                     <h1>People</h1>
                     <div class="portfolio__subtitle"><span>Design, </span><span> Lifestyle, </span><span> Projects</span></div>
                   </div>
                 </div>
-                <div class="img hai">
+                <div class="img hai web photo">
                   <img src="http://shift-cv.themerex.net/wp-content/uploads/2018/06/post-7-copyright.jpg" alt="">
                   <div class="portfolio__img-background">
                     <h1>Advertisement Campaigns</h1>
                     <div class="portfolio__subtitle"><span>Photography, </span><span> Projects, </span><span> WordPress</span></div>
                   </div>
                 </div>
-                <div class="img hai">
+                <div class="img hai photo">
                   <img src="http://shift-cv.themerex.net/wp-content/uploads/2018/06/post-5-copyright.jpg" alt="">
                   <div class="portfolio__img-background">
                     <h1>Colorful Design Patterns</h1>
                     <div class="portfolio__subtitle"><span>Photography, </span><span> Projects</div>
                   </div>
                 </div>
-                <div class="img hai">
+                <div class="img hai photo graphic">
                   <img src="http://shift-cv.themerex.net/wp-content/uploads/2018/06/post-11-copyright.jpg" alt="">
                   <div class="portfolio__img-background">
                     <h1>Traveling Helps Stop Procrastinating</h1>
                     <div class="portfolio__subtitle"><span>Lifestyle, </span><span> Photography</span></div>
                   </div>
                 </div>
-                <div class="img hai">
+                <div class="img hai video">
                   <img src="http://shift-cv.themerex.net/wp-content/uploads/2018/06/post-3-copyright.jpg" alt="">
                   <div class="portfolio__img-background">
                     <h1>Beauty in Motion – Video Stories</h1>
                     <div class="portfolio__subtitle"><span>Lifestyle, </span><span> Projects</div>
                   </div>
                 </div>
-                <div class="img hai">
+                <div class="img hai web">
                   <img src="http://shift-cv.themerex.net/wp-content/uploads/2018/06/post-1-copyright.jpg" alt="">
                   <div class="portfolio__img-background">
                     <h1>Passion For Design</h1>
@@ -605,8 +611,8 @@
                 </div>
               </div>
               <div class="wrap-portfolio__page-number" id="wrap-portfolio__page-number">
-                <div class="portfolio__page1" onclick="geeksportal('page-mot')">1</div>
-                <div class="portfolio__page2" onclick="geeksportal('page-hai')">2</div>
+                <div class="portfolio__page portfolio__page1 active__page" onclick="category('mot')">1</div>
+                <div class="portfolio__page portfolio__page2" onclick="category('hai')">2</div>
               </div>
             </div>
           </div>
@@ -621,6 +627,7 @@
           <div class="wrap-icon-testimonials">
               <button class="icon-testimonials" id="icon-testimonials">
                 <i class="fas fa-quote-left"></i>
+                <i class="fas fa-quote-left pseudo"></i>
               </button>
           </div>
           <div class="testimonials-detail" id="testimonials-detail">
@@ -632,8 +639,8 @@
                 <i class="fas fa-angle-up"></i>
               </div>
             </div>
-            <div class="testimonials-detail__wrap">
-                <div class="wrap-blogger-item">
+            <div class="testimonials-detail__wrap" id="testimonials-detail__wrap">
+                <div class="wrap-blogger-item page__one page__back">
                   <div class="blogger-item__wrap-name-date">
                     <span class="blogger__draw-line"></span>
                     <div class="blogger-item_name-date">
@@ -650,7 +657,7 @@
                       Awesome! You’re creative, smart and edgy – just what we needed for our mobile application startup! Your graphic design looks and works great for us, so we will be contacting you soon!</p>
                   </div>
                 </div>
-                <div class="wrap-blogger-item">
+                <div class="wrap-blogger-item page__one page__back">
                   <div class="blogger-item__wrap-name-date">
                     <span class="blogger__draw-line steven-morris"></span>
                     <div class="blogger-item_name-date">
@@ -666,7 +673,7 @@
                       <img src="./icon/left-quotes-sign.png" alt="">
                       I would definitely recommend your services to everyone who’s looking for quality web/graphic design. I am 100% satisfied with the outcome, and would like to thank you for the hard work on…                  </div>
                 </div>
-                <div class="wrap-blogger-item">
+                <div class="wrap-blogger-item page__one page__back">
                   <div class="blogger-item__wrap-name-date">
                     <span class="blogger__draw-line amy-jones"></span>
                     <div class="blogger-item_name-date">
@@ -682,10 +689,48 @@
                       <img src="./icon/left-quotes-sign.png" alt="">
                       I’m happy to be able to install, manage and customize the theme without anyone’s help! thank you so much for the wonderful job you’ve done for me, and I really hope to…                  </div>
                 </div>
+                <div class="wrap-blogger-item page__two page__next">
+                  <div class="blogger-item__wrap-name-date">
+                    <span class="blogger__draw-line"></span>
+                    <div class="blogger-item_name-date">
+                      <h6>Mario Lopez</h6>
+                      <span>June 20, 2018</span>
+                    </div>
+                  </div>
+                  <div class="blogger-item__wrap-ava-para">
+                    <div class="blogger-item__wrap-ava">
+                      <img src="http://shift-cv.themerex.net/wp-content/uploads/2018/06/1test-copyright-100x100.jpg" alt="">
+                    </div>
+                    <p class="blogger-item__wrap-para">
+                      <img src="./icon/left-quotes-sign.png" alt="">
+                      Thank you so much for developing this awesome theme for our future site! The project would have never become successful without your input. Everything runs smoothly and looks amazing!</p>
+                  </div>
+                </div>
+                <div class="wrap-blogger-item page__two page__next">
+                  <div class="blogger-item__wrap-name-date">
+                    <span class="blogger__draw-line steven-morris"></span>
+                    <div class="blogger-item_name-date">
+                      <h6>John Smith</h6>
+                      <span>June 26, 2018</span>
+                    </div>
+                  </div>
+                  <div class="blogger-item__wrap-ava-para">
+                    <div class="blogger-item__wrap-ava">
+                      <img src="http://shift-cv.themerex.net/wp-content/uploads/2018/06/3test-copyright-100x100.jpg" alt="">
+                    </div>
+                    <p class="blogger-item__wrap-para">
+                      <img src="./icon/left-quotes-sign.png" alt="">
+                      Hi everyone! I recommend this designer to you if you need a fresh idea for a beautiful ad, app or website. We’re lucky to be working with you!
+                    </p>
+                  </div>
+                </div>
                 <div class="wrap-testtimonials__page">
-                    <div class="testtimonials__page one">1</div>
-                    <div class="testtimonials__page two">2</div>
-                    <div class="testtimonials__page next">
+                    <div class="testtimonials__page" id="p__back" onclick="catogory__testimonials('page__back')">
+                      <i class="fas fa-long-arrow-alt-left"></i>
+                    </div>
+                    <div class="testtimonials__page p__one" onclick="catogory__testimonials('page__one')">1</div>
+                    <div class="testtimonials__page p__two" onclick="catogory__testimonials('page__two')">2</div>
+                    <div class="testtimonials__page" id="p__next" onclick="catogory__testimonials('page__next')">
                       <i class="fas fa-long-arrow-alt-right"></i>
                     </div>
                 </div>
@@ -703,6 +748,7 @@
             <div class="wrap-icon-contacts">
               <button class="icon-contacts" id="icon-contacts">
                 <i class="far fa-envelope"></i>
+                <i class="far fa-envelope pseudo"></i>
               </button>
             </div>
             <div class="contacts-detail" id="contacts-detail">
@@ -809,5 +855,9 @@
     </div>
     <script  type="text/javascript" src="./js/index.js"></script>
     <script src='Chart.min.js'></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
   </body>
 </html>

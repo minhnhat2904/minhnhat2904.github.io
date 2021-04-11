@@ -209,6 +209,47 @@ body{
 .icon-user__left i{
     color: white;
 }
+.pseudo{
+    position: absolute;
+    top: 35%;
+    left: 35%;
+    display: block;
+    opacity: 0;
+}
+
+.icon-user__left:hover .pseudo{
+    display: block;
+    animation: pseudo 0.2s ease-in;
+    opacity: 0.4;
+}
+@keyframes pseudo{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.7);
+    }
+}
+.icon-resume:hover .pseudo{
+    display: block;
+    animation: pseudo 0.2s ease-in;
+    opacity: 0.4;
+}
+.icon-portfolio:hover .pseudo{
+    display: block;
+    animation: pseudo 0.2s ease-in;
+    opacity: 0.4;
+}
+.icon-testimonials:hover .pseudo{
+    display: block;
+    animation: pseudo 0.2s ease-in;
+    opacity: 0.4;
+}
+.icon-contacts:hover .pseudo{
+    display: block;
+    animation: pseudo 0.2s ease-in;
+    opacity: 0.4;
+}
 .icon-user__right{
     width: 65px;
     height: 65px;
@@ -224,6 +265,19 @@ body{
     border: none;
     outline: none;
     z-index: 1;
+}
+.pseudo-pen{
+    position: absolute;
+    top: 40%;
+    left: 39%;
+    display: block;
+    opacity: 1;
+}
+
+.icon-user__right:hover .pseudo-pen{
+    display: block;
+    opacity: 0.4;
+    animation: pseudo 0.2s ease-in;
 }
 .icon-user__right i{
     color: white;
@@ -498,6 +552,10 @@ body{
     height: 100%;
     position: relative;
 }
+.icon-resume__print:hover .pseudo{
+    opacity: 0.4;
+    animation: pseudo 0.2s ease-in;
+}
 .icon-resume__print__hover{
     position: absolute;
     color: white;
@@ -550,6 +608,10 @@ body{
     align-items: center;
     border: none;
     outline: none;
+}
+.icon-resume__download:hover .pseudo{
+    opacity: 0.4;
+    animation: pseudo 0.2s ease-in;
 }
 .icon-resume__download img{
     width: 20px;
@@ -774,69 +836,84 @@ body{
     position: relative;
 }
 @keyframes run-wordpress{
-    from{
+    0%{
         width: 0;
     }
-    to{
+    40%{
+        width: 0;
+    }
+    100%{
         width: 90%;
     }
 }
 @keyframes run-php{
-    from{
+    0%{
         width: 0;
     }
-    to{
+    40%{
+        width: 0;
+    }
+    100%{
         width: 80%;
     }
 }
 @keyframes run-html{
-    from{
+    0%{
         width: 0;
     }
-    to{
+    40%{
+        width: 0;
+    }
+    100%{
         width: 93%;
     }
 }
 @keyframes run-css{
-    from{
+    0%{
         width: 0;
     }
-    to{
+    40%{
+        width: 0;
+    }
+    100%{
         width: 82%;
     }
 }
 @keyframes run-mysql{
-    from{
+    0%{
         width: 0;
     }
-    to{
+    40%{
+        width: 0;
+    }
+    100%{
         width: 75%;
     }
 }
 .wordpress{
     width: 90%;
     background-color: var(--blue-color);
-    animation: run-wordpress 2s ease-in-out;
+    animation: run-wordpress 3s ease-in-out;
 }
 .php{
     width: 80%;
     background-color: var(--aqua-color);
-    animation: run-php 2s ease-in-out;
+    animation: run-php 3s ease-in-out;
 }
 .html{
     width: 93%;
     background-color: var(--yellow-color);
-    animation: run-html 2s ease-in-out;
+    animation: run-html 3s ease-in-out;
 }
 .css{
     width: 82%;
     background-color: var(--orange-color);
-    animation: run-css 2s ease-in-out;
+    animation: run-css 3s ease-in-out;
 }
 .mysql{
     width: 75%;
     background-color: var(--red-color);
-    animation: run-mysql 2s ease-in-out;
+    animation: run-mysql 3s ease-in-out;
 }
 .progress-language__percent{
     float: right;
@@ -1052,6 +1129,10 @@ body{
     color: #1d1d1d;
     cursor: pointer;
 }
+
+.show{
+    display: block;
+}
 .filter-item:hover{
     color: var(--blue-color);
 }
@@ -1071,10 +1152,19 @@ body{
     object-fit: cover;
     cursor: pointer;
 }
+@keyframes img-opacity{
+    from{
+        opacity: 0.5;
+    }
+    to{
+        opacity: 1;
+    }
+}
 .portfolio-image .img{
     position: relative;
     display: none;
     margin: 0 3.7px;
+    animation: img-opacity 1s ease-in-out;
 }
 
 .img.show{
@@ -1121,11 +1211,12 @@ body{
     cursor: pointer;
 }
 .portfolio__img-background h1{
-    font-size: 22px;
+    font-size: 20px;
     font-family: inherit;
     margin: 0;
     cursor: pointer;
     width: 100%;
+    line-height: 18px;
     text-align: center;
     position: absolute;
     transform: translateY(0%);
@@ -1133,24 +1224,33 @@ body{
 }
 @keyframes h1-run{
     from{
-        transform: translate(-50%);
+        transform: translate(-50%) skewX(90deg);
     }
     to{
-        transform: translateX(0%);
+        transform: translateX(0%) skewX(0);
     }
 }
 .portfolio__subtitle{
     display: flex;
     position: absolute;
-    transform: translateY(130%);
-    animation: span-run 0.3s ease-in-out;
+    transform: translateY(150%);
+    /* transform: skewX(-45deg); */
+    animation: span-run 0.3s ease-in;
 }
 @keyframes span-run{
     from{
-        transform: translate(150%,130%);
+        transform: translate(150%,150%) skewX(-90deg);
     }
     to{
-        transform: translateX(0%,130%);
+        transform: translate(0%,150%) skewX(0);
+    }
+}
+@keyframes span-skew{
+    from{
+        transform: skewX(-90deg);
+    }
+    to{
+        transform: skewX(0deg);
     }
 }
 .portfolio__subtitle span{
@@ -1183,6 +1283,7 @@ body{
     font-size: 19px;
     font-weight: 700;
     cursor: pointer;
+    color: var(--background-color);
 }
 .portfolio__page2{
     width: 54px;
@@ -1196,7 +1297,13 @@ body{
     cursor: pointer;
     color: var(--background-color);
 }
+.active__page{
+    color: var(--black-color)
+}
 .portfolio__page2:hover{
+    color: #1d1d1d;
+}
+.portfolio__page1:hover{
     color: #1d1d1d;
 }
 .testimonials{
@@ -1302,6 +1409,10 @@ body{
     height: auto;
     border-bottom: solid 2px var(--bg-gray-color);
     margin-bottom: 36.4px;
+    display: none;
+}
+.show{
+    display: block;
 }
 .blogger-item__wrap-name-date{
     display: flex;
@@ -1385,6 +1496,7 @@ body{
     font-size: 17px;
     font-weight: 600;
     font-family: inherit;
+    cursor: pointer;
 }
 .steven-morris{
     width: 3px;
@@ -1398,20 +1510,39 @@ body{
     background-color: var(--yellow-color);
     margin-right: 1.3rem;
 }
-.two{
+.p__one{
     color: var(--background-color);
     cursor: pointer;
 }
-.two:hover{
+.p__one:hover{
     color: var(--black-color);
 }
-.next{
+.p__two{
     color: var(--background-color);
     cursor: pointer;
 }
-.next:hover{
+.p__two:hover{
     color: var(--black-color);
 }
+#p__next{
+    color: var(--background-color);
+    cursor: pointer;
+}
+#p__next:hover{
+    color: var(--black-color);
+}
+#p__back{
+    color: var(--background-color);
+    cursor: pointer;
+    display: none;
+}
+#p__back:hover{
+    color: var(--black-color);
+}
+.active_page{
+   color: var(--black-color); 
+}
+
 .contacts{
     width: 100%;
     height: auto;
@@ -2308,7 +2439,7 @@ body{
     .designer-skills__title h5 {
         font-size: 16px;
     }
-    #chart-pie{
+    #-pie{
         display: inline-block;
         width: 140px !important;
         height: 140px !important;
