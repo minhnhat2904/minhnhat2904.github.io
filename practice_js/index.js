@@ -1,9 +1,9 @@
 let exOneDate = document.getElementById("ex__one--date");
 let exOneTime = document.getElementById("ex__one--time");
 let exTwoFormatMDY = document.getElementById("ex__two__format--m-d-y");
-let exTwoFormatMDYSlash = document.getElementById("ex__two__format--m/d/y");
+let exTwoFormatMDYSlash = document.getElementById("ex__two__format--mdy--slash");
 let exTwoFormatDMY = document.getElementById("ex__two__format--d-m-y");
-let exTwoFormatDMYSlash = document.getElementById("ex__two__format--d/m/y");
+let exTwoFormatDMYSlash = document.getElementById("ex__two__format--dmy--slash");
 let today = new Date();
 let date =
   today.getDate() + "-" + (today.getMonth() + 1) + "-" + today.getFullYear();
@@ -116,10 +116,14 @@ function addElement(e) {
   if (a.value == "" || a.value <= 1) {
     alert("Chưa nhập mảng");
   } else {
-    arrElement.innerHTML =
+    if(a.value > 100){
+      alert("Nhập nhiều quá máy chạy không nổi + điền mệt");
+    }else{
+      arrElement.innerHTML =
       '<p style="margin-right: 15px;" id="arr__element__title">Nhập mảng : </p>';
-    for (let i = 0; i < a.value; i++) {
-      arrElement.innerHTML += '<input type="number" name="array[]" value="">';
+      for (let i = 0; i < a.value; i++) {
+        arrElement.innerHTML += '<input type="number" name="array[]" value="">';
+      }
     }
   }
 }

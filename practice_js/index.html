@@ -4,141 +4,150 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="shortcut icon" href="icons8-javascript-96.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200&display=swap" rel="stylesheet">
     <title>Practice JS</title>
 </head>
 <body>
-    <div class="container">
-        <div class="exercise ex__one">
-            <h2>Bài 1 : Viết chương trình Javascript để hiển thị ngày giờ</h2>
-            <div id="ex__one--date">
-                <h4>Date: </h4>
-            </div>
-            <div id="ex__one--time">
-                <h4>Time: </h4>
-            </div>
-        </div>
-        <div class="exercise ex__two">
-            <h2>Bài 2 : Viết chương trình để in ra ngày tháng năm theo các định dạng mm-dd-
-                yyyy, mm/dd/yyyy, dd-mm-yyyy, dd/mm/yyyy
-            </h2>
-            <div id="ex__two__format--m-d-y">
-                <h4>MM-DD-YYYY : </h4>
-            </div>
-            <div id="ex__two__format--m/d/y">
-                <h4>MM/DD/YYYY : </h4>
-            </div>
-            <div id="ex__two__format--d-m-y">
-                <h4>DD-MM-YYYY : </h4>
-            </div>
-            <div id="ex__two__format--d/m/y">
-                <h4>DD/MM/YYYY : </h4>
-            </div>
-            
-        </div>
-        <div class="exercise ex__three">
-            <h2>Bài 3 : Viết chương trình JavaScript để kiểm tra xem một số nguyên đã cho có
-                chuỗi chữ số tăng hay không
-            </h2>
-            <form action="" id="ex__three__form__check" onsubmit="checkBaiTapBa(event)">
-                <input type="number" value="" id="ex__three__form__input">
-                <input type="submit" value="Check" id="ex__three__form__submit">
-            </form>
-            <div id="ex__three__result"></div>
-            <!-- <h4>Result</h4> -->
-        </div>
-        <div class="exercise ex__four">
-            <h2>Bài 4 : Viết một chương trình JavaScript để thay thế mọi ký tự trong một chuỗi đã
-                cho với ký tự theo sau nó trong bảng chữ cái.                
-            </h2>
-            <form action="" id="ex__four__form__check" onsubmit="checkBaiTapBon(event)">
-                <input type="text" value="" id="ex__four__form__input">
-                <input type="submit" value="Check" id="ex__four__form__submit">
-            </form>
-            <div id="ex__four__result"></div>
-        </div>
-        <div class="exercise ex__five">
-            <h2>Bài 5 : Viết chương trình JavaScript để tạo chuỗi bằng cách sử dụng ba ký tự ở
-                giữa của một chuỗi có độ dài lẻ. Độ dài chuỗi phải lớn hơn hoặc bằng ba.                                
-            </h2>
-            <form action="" id="ex__five__form__check" onsubmit="checkBaiTapNam(event)">
-                <input type="text" value="" id="ex__five__form__input">
-                <input type="submit" value="Check" id="ex__five__form__submit">
-            </form>
-            <div id="ex__five__result"></div>
-        </div>
-        <div class="exercise ex__six">
-            <h2>Bài 6 : Viết chương trình hiển thị số xuất hiện nhiều lần nhất trong mảng                              
-            </h2>
-            <form action="" id="ex__six__form__check" onsubmit="checkBaiTapSau(event)">
-                <div style="display: flex;" id="add__element">
-                    <p style="margin-right: 15px;" id="add__element__title">Nhập số phần tử mảng : </p>
-                    <input type="number" value="" id="ex__six__form__input">
-                    <input type="button" value="Create" style="width: fit-content" onclick="addElement(event)" id="ex__six__form__add">
+    <div class="container--wrap">
+        <div class="container">
+            <div class="exercise ex__one">
+                <h2><u>Bài 1 :</u> Viết chương trình Javascript để hiển thị ngày giờ</h2>
+                <div class="ex__one__result">
+                    <div id="ex__one--date">
+                        <h4>Date: </h4>
+                    </div>
+                    <div id="ex__one--time">
+                        <h4>Time: </h4>
+                    </div>
                 </div>
-                <div style="display: flex;" id="arr__element">
-                </div>
-                <input type="submit" value="Check" id="ex__six__form__submit">
-            </form>
-            <div id="ex__six__result">
-                <h4>Số nhiều nhất trong mảng là : </h4>
             </div>
-        </div>
-        <div class="exercise ex__seven">
-            <h2>Bài 7 : Viết chương trình để kiểm tra xem chuỗi chứa 'java' hay không                              
-            </h2>
-            <form action="" id="ex__seven__form__check" onsubmit="checkBaiTapBay(event)">
-                <div style="display: flex;" id="add__string">
-                    <p style="margin-right: 15px;">Nhập chuỗi : </p>
-                    <input type="text" value="" id="ex__seven__form__input">
-                </div>
-                <input type="submit" value="Check" id="ex__seven__form__submit">
-            </form>
-            <div id="ex__seven__result">
-                <h4>Result : </h4>
+            <div class="exercise ex__two">
+                <h2><u>Bài 2 :</u> Viết chương trình để in ra ngày tháng năm theo các định dạng mm-dd-
+                    yyyy, mm/dd/yyyy, dd-mm-yyyy, dd/mm/yyyy
+                </h2>
+                <div class="ex__two__result">
+                    <div id="ex__two__format--m-d-y">
+                        <h4>MM-DD-YYYY : </h4>
+                    </div>
+                    <div id="ex__two__format--mdy--slash">
+                        <h4>MM/DD/YYYY : </h4>
+                    </div>
+                    <div id="ex__two__format--d-m-y">
+                        <h4>DD-MM-YYYY : </h4>
+                    </div>
+                    <div id="ex__two__format--dmy--slash">
+                        <h4>DD/MM/YYYY : </h4>
+                    </div>
+        
+                </div>            
             </div>
-        </div>
-        <div class="exercise ex__eight">
-            <h2>Bài 8 : Viết một hàm để lấy tên tháng từ một số cụ thể ( ví dụ : 1 – Tháng một )                              
-            </h2>
-            <form action="" id="ex__eight__form__check" onsubmit="checkBaiTapTam(event)">
-                <div style="display: flex;" id="ex__eight__add__number">
-                    <p style="margin-right: 15px;">Nhập số : </p>
-                    <input type="number" value="" id="ex__eight__form__input">
-                </div>
-                <input type="submit" value="Check" id="ex__eight__form__submit">
-            </form>
-            <div id="ex__eight__result">
-                <h4>Result : </h4>
+            <div class="exercise ex__three">
+                <h2><u>Bài 3 :</u> Viết chương trình JavaScript để kiểm tra xem một số nguyên đã cho có
+                    chuỗi chữ số tăng hay không
+                </h2>
+                <form action="" id="ex__three__form__check" onsubmit="checkBaiTapBa(event)">
+                    <input type="number" value="" id="ex__three__form__input">
+                    <input type="submit" value="Check" id="ex__three__form__submit">
+                </form>
+                <div id="ex__three__result"></div>
+                <!-- <h4>Result</h4> -->
             </div>
-        </div>
-        <div class="exercise ex__nine">
-            <h2>Bài 9: Viết một hàm JavaScript nhập một chuỗi và tìm từ dài nhất trong chuỗi                              
-            </h2>
-            <form action="" id="ex__nine__form__check" onsubmit="checkBaiTapChin(event)">
-                <div style="display: flex;" id="ex__nine__add__string">
-                    <p style="margin-right: 15px;">Nhập chuỗi: </p>
-                    <input type="text" value="" id="ex__nine__form__input">
-                </div>
-                <input type="submit" value="Check" id="ex__nine__form__submit">
-            </form>
-            <div id="ex__nine__result">
-                <h4>Result : </h4>
+            <div class="exercise ex__four">
+                <h2><u>Bài 4 :</u> Viết một chương trình JavaScript để thay thế mọi ký tự trong một chuỗi đã
+                    cho với ký tự theo sau nó trong bảng chữ cái.                
+                </h2>
+                <form action="" id="ex__four__form__check" onsubmit="checkBaiTapBon(event)">
+                    <input type="text" value="" id="ex__four__form__input">
+                    <input type="submit" value="Check" id="ex__four__form__submit">
+                </form>
+                <div id="ex__four__result"></div>
             </div>
-        </div>
-        <div class="exercise ex__ten">
-            <h2>Bài 10 : Viết chương trình tạo form HTML nhập 2 số và in ra giá trị là số nguyên
-                tố giữa 2 số đó                                              
-            </h2>
-            <form action="" id="ex__ten__form__check" onsubmit="checkBaiTapMuoi(event)">
-                <div style="display: flex;" id="ex__ten__add__number">
-                    <p style="margin-right: 15px;">Nhập số : </p>
-                    <input type="text" value="" id="ex__ten__form__input__first__num">
-                    <input type="text" value="" id="ex__ten__form__input__second__num">
+            <div class="exercise ex__five">
+                <h2><u>Bài 5 :</u> Viết chương trình JavaScript để tạo chuỗi bằng cách sử dụng ba ký tự ở
+                    giữa của một chuỗi có độ dài lẻ. Độ dài chuỗi phải lớn hơn hoặc bằng ba.                                
+                </h2>
+                <form action="" id="ex__five__form__check" onsubmit="checkBaiTapNam(event)">
+                    <input type="text" value="" id="ex__five__form__input">
+                    <input type="submit" value="Check" id="ex__five__form__submit">
+                </form>
+                <div id="ex__five__result"></div>
+            </div>
+            <div class="exercise ex__six">
+                <h2><u>Bài 6 :</u> Viết chương trình hiển thị số xuất hiện nhiều lần nhất trong mảng                              
+                </h2>
+                <form action="" id="ex__six__form__check" onsubmit="checkBaiTapSau(event)">
+                    <div style="display: flex;" id="add__element">
+                        <p style="margin-right: 15px;" id="add__element__title">Nhập số phần tử mảng : </p>
+                        <input type="number" value="" id="ex__six__form__input">
+                        <input type="button" value="Create" style="width: fit-content" onclick="addElement(event)" id="ex__six__form__add">
+                    </div>
+                    <div style="display: flex;" id="arr__element">
+                    </div>
+                    <input type="submit" value="Check" id="ex__six__form__submit">
+                </form>
+                <div id="ex__six__result">
+                    <h4>Số nhiều nhất trong mảng là : </h4>
                 </div>
-                <input type="submit" value="Check" id="ex__ten__form__submit">
-            </form>
-            <div id="ex__ten__result">
-                <h4>Result : </h4>
+            </div>
+            <div class="exercise ex__seven">
+                <h2><u>Bài 7 :</u> Viết chương trình để kiểm tra xem chuỗi chứa 'java' hay không                              
+                </h2>
+                <form action="" id="ex__seven__form__check" onsubmit="checkBaiTapBay(event)">
+                    <div style="display: flex;" id="add__string">
+                        <p style="margin-right: 15px;">Nhập chuỗi : </p>
+                        <input type="text" value="" id="ex__seven__form__input">
+                    </div>
+                    <input type="submit" value="Check" id="ex__seven__form__submit">
+                </form>
+                <div id="ex__seven__result">
+                    <h4>Result : </h4>
+                </div>
+            </div>
+            <div class="exercise ex__eight">
+                <h2><u>Bài 8 :</u> Viết một hàm để lấy tên tháng từ một số cụ thể ( ví dụ : 1 – Tháng một )                              
+                </h2>
+                <form action="" id="ex__eight__form__check" onsubmit="checkBaiTapTam(event)">
+                    <div style="display: flex;" id="ex__eight__add__number">
+                        <p style="margin-right: 15px;">Nhập số : </p>
+                        <input type="number" value="" id="ex__eight__form__input">
+                    </div>
+                    <input type="submit" value="Check" id="ex__eight__form__submit">
+                </form>
+                <div id="ex__eight__result">
+                    <h4>Result : </h4>
+                </div>
+            </div>
+            <div class="exercise ex__nine">
+                <h2><u>Bài 9 :</u> Viết một hàm JavaScript nhập một chuỗi và tìm từ dài nhất trong chuỗi                              
+                </h2>
+                <form action="" id="ex__nine__form__check" onsubmit="checkBaiTapChin(event)">
+                    <div style="display: flex;" id="ex__nine__add__string">
+                        <p style="margin-right: 15px;">Nhập chuỗi: </p>
+                        <input type="text" value="" id="ex__nine__form__input">
+                    </div>
+                    <input type="submit" value="Check" id="ex__nine__form__submit">
+                </form>
+                <div id="ex__nine__result">
+                    <h4>Result : </h4>
+                </div>
+            </div>
+            <div class="exercise ex__ten">
+                <h2><u>Bài 10 :</u> Viết chương trình tạo form HTML nhập 2 số và in ra giá trị là số nguyên
+                    tố giữa 2 số đó                                              
+                </h2>
+                <form action="" id="ex__ten__form__check" onsubmit="checkBaiTapMuoi(event)">
+                    <div style="display: flex;" id="ex__ten__add__number">
+                        <p style="margin-right: 15px;">Nhập số : </p>
+                        <input type="number" value="" id="ex__ten__form__input__first__num">
+                        <input type="number" value="" id="ex__ten__form__input__second__num">
+                    </div>
+                    <input type="submit" value="Check" id="ex__ten__form__submit">
+                </form>
+                <div id="ex__ten__result">
+                    <h4>Result : </h4>
+                </div>
             </div>
         </div>
     </div>
