@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  .hi-icon-effect-6 .hi-icon {
+box-shadow: 0 0 0 4px rgba(255,255,255,1);
+transition: background 0.2s, color 0.2s;
+}
+ 
+.no-touch .hi-icon-effect-6 .hi-icon:hover {
+background: rgba(255,255,255,1);
+color: #64bb5d;
+}
+ 
+.no-touch .hi-icon-effect-6 .hi-icon:hover:before {
+animation: spinAround 2s linear infinite;
+}
+ 
+@keyframes spinAround {
+from {
+transform: rotate(0deg)
+}
+to {
+transform: rotate(360deg);
+}
+}
+</style>
+</head>
+<body>
+  <div class="hi-icon-wrap hi-icon-effect-1 hi-icon-effect-1a">
+ 
+    <a class="hi-icon hi-icon-mobile" href="#">Mobile</a>
+    <a class="hi-icon hi-icon-screen" href="#">Desktop</a>
+    <a class="hi-icon hi-icon-earth" href="#">Partners</a>
+    <a class="hi-icon hi-icon-support" href="#">Support</a>
+    <a class="hi-icon hi-icon-locked" href="#">Security</a>
+
+</div>
+</body>
+</html>

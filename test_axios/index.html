@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <form method="POST" action="#" class="form__input" id="form__input" name="form_input" onsubmit="myFunction(event)">
+            <div class="fullname">
+                <label class="fullname__title">Fullname</label>
+                <input type="text" class="fullname__form-input" id="fullname__input" placeholder="Nhap ten cua ban">
+            </div>
+            <br>
+            <input type="submit" class="add" id="add" value="ADD">
+            </input>
+        </form>
+        <div class="space" style="height: 50px;"></div>
+        <ul id="list">
+            
+        </ul>
+        <div class="icon__doraemon">
+            <img src="/test_axios/main.png" alt="">
+        </div>
+        <div class="icon__nobita">
+            <img src="/test_axios/nobita, nobi icon.png" alt="">
+        </div>
+        <div class="icon__father">
+            <img src="/test_axios/mother-tamako-nobi-icon.png" alt="">
+        </div>
+        <div class="icon__mother">
+            <img src="/test_axios/nobisuke-nobi-father-icon.png" alt="">
+        </div>
+        
+    </div>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal_body" id="modal_body">
+            
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-danger" >OKE</button>
+         </div>
+         
+        </div>
+      
+      </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

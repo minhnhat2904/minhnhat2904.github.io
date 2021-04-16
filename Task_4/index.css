@@ -1,0 +1,457 @@
+
+.container{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+
+}
+.menu-top{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 4.2vw;
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    margin: auto;
+    box-shadow: 0px 0.1px 3px gray;
+}
+.icon-form{
+    font-size: 3vw;
+    display: flex;
+    align-items: center;
+}
+
+.icon-form>i{
+    margin: 0.6vw 1vw;
+}
+
+.input-form{
+   width: 15.5vw;
+   height: 3vw;
+   padding: 0 2.5vw;
+   border-radius: 30px;
+    display: flex;
+    align-items: center;
+    background-color: #f0f2f5;
+    margin-left: -0.4vw;
+    font-size: 1.1vw;
+    border: none;
+}
+.input-form:focus{
+    outline: 0;
+}
+.input-wrapper{
+    position: relative;
+}
+.input-wrapper i{
+    opacity: 0.4;
+    border-radius: 2vw;
+    position: absolute;
+    top: -1vw;
+    left: -0.7vw;
+}
+.m-t-center{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.m-t-center i{
+    color: black;
+    opacity: 0.6; 
+    font-size: 1.6vw;
+}
+.m-t-center div{
+    margin: 0.3vw;
+    cursor: pointer;
+    width: 9vw;
+    height: 3.4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1vw;
+}
+.m-t-center div:hover{
+    background-color: #f0f2f5;
+
+}
+.m-t-center div:hover{
+    background-color: #f0f2f5;
+}
+.m-t-right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 1vw;
+}
+.button{
+    display: flex;
+    width: 6vw;
+    height: 2.8vw;
+    border-radius: 18px;
+    align-items: center;
+    cursor: pointer;
+    margin: 0.3vw;
+    border: solid #f0f2f5;
+    outline: none;
+
+}
+.button:focus{
+    background-color: #e7f3ff;
+    color: #1876f2;
+}
+.button--ava{
+    width: 2vw;
+    height: 2vw;
+    object-fit: cover;
+
+}
+.button--ava img{
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    margin-left: 0.1vw;
+    box-sizing: border-box;
+}
+.button--right{
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.3vw;
+    cursor: pointer;
+}
+.button--right i{
+    font-size: 1.3vw;
+}
+.button--right:hover{
+    background-color: rgb(221, 221, 221);
+}
+.cover-img-wrapper{
+    background: linear-gradient(#c6dff8, #fff );
+}
+.button p{
+    font-weight: 600;
+    margin-left: 0.5vw;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cover-img{
+    width: 70%;
+    height: 29.5vw;
+    margin: auto;
+    background-size: cover;
+    background-image: url("https://en.ephoto360.com/uploads/worigin/2019/08/01/tao-cover-anime-dragon-ball-min5d428b361828d_a6738a3f1c8da581f554b2cc7c962ae5.jpg");
+    background-position: center;
+    position: relative;
+    border-radius: 1vw 1vw;
+    cursor: pointer;
+}
+
+.edit-cover-img{
+    position: absolute;
+    top: 87%;
+    left: 78%;
+    width: 176px;
+    height: 36px;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5vw 0.5vw;
+    cursor: pointer;
+} 
+.ava-wrapper{
+    width: 176px;
+    height: 176px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 100px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: -160px auto;
+    cursor: pointer;
+
+}
+
+.ava{
+    width: 94.5%;
+    height: 94.5%;
+}
+
+.ava img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: solid rgb(207, 207, 207) 1px;
+    opacity: 1;
+}
+.ava img:hover{
+    opacity: 0.9;
+}
+
+.ava div{
+    position: absolute;
+    top: 72%;
+    left: 76%;
+    width: 2.8vw;
+    height: 2.8vw;
+    border-radius: 50%;
+    background-color: rgb(223, 223, 223);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ava div i{
+    font-size: 19px;
+}
+.name{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-top: 2vw;
+}
+.name h1{
+    margin: 0;
+}
+.name p{
+    font-size: 16px;
+    margin-top: 0.5vw;
+    margin-bottom: 1vw;
+}
+.menu-bottom--wrap{
+    width: 100%;
+    background-color: white;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 4.1vw;
+}
+.menu-bottom{
+    width: 64%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    border-top: solid rgb(196, 196, 196) 1px;
+    margin: auto;   
+}
+.menu-bottom--left{
+    display: flex;
+    justify-content: space-between;   
+}
+.menu-bottom--left button{
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    color: #65676B;
+    cursor: pointer;
+    border: solid rgba(0, 0, 0, 0) 3px;
+    
+    background-color: white;
+    outline: none;
+}
+.menu-bottom--left span:hover{
+    background-color: #f0f2f5;
+    border-radius: 6px;
+    border: none;
+}
+.menu-bottom--left button:focus{
+    border-bottom: solid #1876f2 3px;
+    color: #1876f2;
+}
+
+.menu-bottom--left span{
+    font-size: 15px;
+    font-weight: 600;
+    margin: 4px 0px;
+    padding: 14px 8px;
+}
+.menu-bottom--right{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.menu-bottom--right--btn{
+    width: auto;
+    height: auto;
+    background-color: #e0e0e0;
+    margin-left: 10px;
+    padding: 10px 16px;
+    border-radius: 5px;
+    display: block;
+    cursor: pointer;
+    
+}
+.menu-bottom--right--btn--1{
+    width: 12.5vw;
+    height: 1vw;
+    background-color: #e0e0e0;
+    padding: 12px 0px;
+    border-radius: 5px;
+    display: block;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.menu-bottom--right--btn--1 span{
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #050505;
+    font-weight: 600;
+}
+.menu-bottom--right--btn i{
+    font-size: 14px;
+}
+.content{
+    background-color: #f0f2f5;
+}
+
+.box-chat{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+    width: 80px;
+    height: auto;
+    position: fixed;
+    top: 71.5%;
+    left: 94%;
+    align-items: center;
+}
+.box-chat--krilin{
+    background-image: url("https://drawcentral.com/wp-content/uploads/2018/11/How-To-Draw-Krillin-Main-1170x820.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 10px 0;
+}
+.box-chat--master{
+    background-image: url("https://genk.mediacdn.vn/2018/11/2/6575b92b70a2a188cc6ce1875ea01915-d39gm7s-15411349452031997266974.jpg");
+    background-position: center;
+    background-size: cover;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.box-chat--new-mess{
+    background-color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 10px  gray;
+    cursor: pointer;
+}
+.box-chat--new-mess i{
+    font-size: 18px;
+    margin-left: 3px;
+}
+.box-chat--krilin-mess{
+    width: 280px;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    right: 90px;
+    bottom: 60px;
+    box-shadow: 5px 5px 20px gray;
+    border-radius: 10px  10px;
+    display: none;
+}
+.box-chat--krilin-mess::before{
+    content: "";
+    width: 0;
+    height: 0;
+    left: 97%;
+    top: 14px;
+    position: absolute;
+    border-top: 13px solid transparent;
+    border-left: 26px solid white;
+    border-bottom: 13px solid transparent;
+    border-top-right-radius: 10px ;
+    border-bottom-right-radius: 10px;
+    display: none;
+}
+.box-chat--krilin:hover + .box-chat--krilin-mess {
+    display: block;
+}
+.box-chat--krilin:hover + .box-chat--krilin-mess::before{
+    display: block;
+}
+.box-chat--new-mess:hover{
+    background-color: #f0f2f5;
+}
+.box-chat--krilin-mess h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.box-chat--krilin-mess p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-left: 10px;
+    color: #65676B;
+    margin-top: -14px;
+}
+.box-chat--master-mess{
+    width: 280px;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    right: 90px;
+    bottom: 115px;
+    box-shadow: 5px 5px 20px gray;
+    border-radius: 10px  10px;
+    display: none;
+}
+.box-chat--master-mess::before{
+    content: "";
+    width: 0;
+    height: 0;
+    left: 97%;
+    top: 14px;
+    position: absolute;
+    border-top: 13px solid transparent;
+    border-left: 26px solid white;
+    border-bottom: 13px solid transparent;
+    border-top-right-radius: 10px ;
+    border-bottom-right-radius: 10px;
+    display: none;
+}
+.box-chat--master:hover + .box-chat--master-mess {
+    display: block;
+}
+.box-chat--master:hover + .box-chat--master-mess::before{
+    display: block;
+}
+.box-chat--master-mess h2{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+.box-chat--master-mess p{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-left: 10px;
+    color: #65676B;
+    margin-top: -14px;
+}
+.content{
+    box-shadow: 0px 0px 20px 1px rgb(197, 197, 197) inset;
+}
