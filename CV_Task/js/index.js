@@ -263,7 +263,7 @@ function pieChart() {
       responsive: false,
       animation: {
         animateScale: true,
-        duration: 5000,
+        duration: 4000,
         ananimateRotate: true,
       },
     },
