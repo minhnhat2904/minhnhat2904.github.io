@@ -99,6 +99,7 @@ select{
     padding: 5px 10px;
     color: white;
     font-weight: 600;
+    margin-right: 20px;
 }
 .delete{
     background-color: red;
@@ -115,6 +116,7 @@ select{
     padding: 5px 10px;
     color: white;
     font-weight: 600;
+    margin-right: 20px;
 }
 .cancel{
     background-color: gray;
@@ -127,3 +129,17 @@ select{
 .image__add--wrap{
     width: 200px;
 }
+#edit_delete{
+    display: flex;
+    justify-content: flex-start;
+    border: none;
+}
+#save_cancel{
+    display: none;
+    justify-content: flex-start;
+    border: none;
+}
+.input-image__edit{
+    width: 120px;
+}
+
