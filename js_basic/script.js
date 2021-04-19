@@ -1,9 +1,15 @@
 var array = [];
 //Hàm có tham số event
 function preview_image__add(event) {
+  // let files = event.target.files;
+  // let blob = URL.createObjectURL(files[0]);
+  // document.querySelector("#preview-image__add").src = blob;
   let files = event.target.files;
-  let blob = URL.createObjectURL(files[0]);
-  document.querySelector("#preview-image__add").src = blob;
+  let reader = new FileReader();
+  reader.addEventListener("load", function () {
+    document.querySelector("#preview-image__add").src = reader.result;
+  }, false);
+  reader.readAsDataURL(files[0]);
 }
 function preview_image__edit(event) {
   let files = event.target.files;
@@ -18,6 +24,7 @@ function checkError(){
     .getElementById("form__input__add")
     .value.replace(/\s+/g, "");
   let imageInput = document.getElementById("input-image__add").value;
+
   if (nameInput == "") {
     document.getElementById("name__required").style.display = "block";
     count++;
@@ -72,56 +79,64 @@ function checkError(){
       return false;
     }
 }
-function checkErrorEdit(){
-  console.log("abc");
+function checkErrorEdit(event){
   let count = 0;
-  let a = document.querySelector(".save").parentNode.parentNode;
+  let a = event.target.parentNode.parentNode;
   let majorInput = a.querySelector(".select__input").value;
   let nameInput = a.querySelector(".name__input").value.replace(/\s+/g, "");
   let imageInput = a.querySelector(".input-image__edit").value;
   if (nameInput == "") {
-    document.getElementById("name__required__edit").style.display = "block";
+    // document.getElementById("name__required__edit").style.display = "block";
+    a.querySelector(".name__required__edit").style.display = "block";
     count++;
   } else{
     if (nameInput.length > 10) {
-      document.getElementById("name__required__edit").style.display = "block";
-      document.getElementById("name__required__edit").innerHTML = "Không được nhập quá 10 kí tự";
+      // document.getElementById("name__required__edit").style.display = "block";
+      a.querySelector(".name__required__edit").style.display = "block";
+      // document.getElementById("name__required__edit").innerHTML = "Không được nhập quá 10 kí tự";
+      a.querySelector(".name__required__edit").innerHTML = "Không được nhập quá 10 kí tự";
       count++;
     } else{
         if (nameInput.charAt(0).search(/\d/) == 0) {
-          document.getElementById("name__required__edit").style.display = "block";
-          document.getElementById("name__required__edit").innerHTML = "Tên không được bắt đầu bằng số";
+          // document.getElementById("name__required__edit").style.display = "block";
+          a.querySelector(".name__required__edit").style.display = "block";
+          // document.getElementById("name__required__edit").innerHTML = "Tên không được bắt đầu bằng số";
+          a.querySelector(".name__required__edit").innerHTML = "Tên không được bắt đầu bằng số";
           count++;
         } else{
-          document.getElementById("name__required__edit").style.display = "none";
+          a.querySelector(".name__required__edit").style.display = "none";
         }
       }
     }
   if (majorInput == "Mở để chọn chuyên ngành") {
-    document.getElementById("major__required__edit").style.display = "block";
+    // document.getElementById("major__required__edit").style.display = "block";
+    a.querySelector(".major__required__edit").style.display = "block";
     count++;
   } else{
-    document.getElementById("major__required__edit").style.display = "none";
+    // document.getElementById("major__required__edit").style.display = "none";
+    a.querySelector(".major__required__edit").style.display = "none";
   }
   if(imageInput == ""){
-    document.getElementById("image__required__edit").style.display = "block";
+    // document.getElementById("image__required__edit").style.display = "block";
+    a.querySelector(".image__required__edit").style.display = "block";
     count++;
   } else{
     let fsize = a.querySelector(".input-image__edit").files[0].size;
     let ftype = a.querySelector(".input-image__edit").files[0].type;
     if(fsize > 17000){
-      document.getElementById("image__required__edit").style.display = "block";
-      document.getElementById("image__required__edit").innerHTML = "Dung lượng file vượt quá giới hạn";
+      // document.getElementById("image__required__edit").style.display = "block";
+      a.querySelector(".image__required__edit").style.display = "block";
+      a.querySelector(".image__required__edit").innerHTML = "Dung lượng file vượt quá giới hạn";
       count++;
     } else{
       console.log(ftype);
       if(ftype != 'image/png' && ftype != 'image/jepg'){
-        document.getElementById("image__required__edit").style.display = "block";
-        document.getElementById("image__required__edit").innerHTML = "File nhập không đúng";
+        a.querySelector(".image__required__edit").style.display = "block";
+        a.querySelector(".image__required__edit").innerHTML = "File nhập không đúng";
         count++;
       }
       else{
-        document.getElementById("image__required__edit").style.display = "none";
+        a.querySelector(".image__required__edit").style.display = "none";
       }
     } 
   }
@@ -147,7 +162,7 @@ function displayStudent(getStudent) {
         <td><input type="text" readonly value="${getStudent[i].name
           .trim()
           .replace(/\s+/g, " ")}" class="name__input">
-          <p id="name__required__edit" style="display: none;color: red;">Name is required</p>
+          <p class="name__required__edit" style="display: none;color: red;">Name is required</p>
         </td>
         <td>
             <select name="" class="select__input" disabled>
@@ -157,7 +172,7 @@ function displayStudent(getStudent) {
                 <option value="ATTT">ATTT</option>
                 <option value="HTN">HTN</option>
             </select>
-            <p id="major__required__edit" style="display: none;color: red;">Major is required</p>
+            <p class="major__required__edit" style="display: none;color: red;">Major is required</p>
         </td>
         
         <td>
@@ -165,7 +180,7 @@ function displayStudent(getStudent) {
             <img src="${
               getStudent[i].image
             }" alt="hienthihinhanh" class="preview-image__edit">
-            <p id="image__required__edit" style="display: none;color: red;">Image is required</p>
+            <p class="image__required__edit" style="display: none;color: red;">Image is required</p>
         </td>
         <td id="edit_delete">
           <button onclick="editRow(event)" class="edit">Edit</button>
@@ -197,7 +212,7 @@ function saveRow(event, id) {
   getStudent[id].name = name;
   getStudent[id].major = major;
   getStudent[id].image = image;
-  if(checkErrorEdit() == true){
+  if(checkErrorEdit(event) == true){
     saveToLocalStorage(getStudent);
     displayStudent(getStudent);
     a.querySelector(".input-image__edit").style.display = "none";
