@@ -12,10 +12,16 @@ function preview_image__add(event) {
   reader.readAsDataURL(files[0]);
 }
 function preview_image__edit(event) {
+  // let files = event.target.files;
+  // let blob = URL.createObjectURL(files[0]);
+  // let a = event.target.parentNode.parentNode;
+  // a.querySelector(".preview-image__edit").src = blob;
   let files = event.target.files;
-  let blob = URL.createObjectURL(files[0]);
-  let a = event.target.parentNode.parentNode;
-  a.querySelector(".preview-image__edit").src = blob;
+  let reader = new FileReader();
+  reader.addEventListener("load", function () {
+    event.target.parentNode.parentNode.querySelector("#preview-image__add").src = reader.result;
+  }, false);
+  reader.readAsDataURL(files[0]);
 }
 function checkError(){
   let count = 0;
