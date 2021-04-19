@@ -19,7 +19,7 @@ function preview_image__edit(event) {
   let files = event.target.files;
   let reader = new FileReader();
   reader.addEventListener("load", function () {
-    event.target.parentNode.parentNode.querySelector("#preview-image__add").src = reader.result;
+    event.target.parentNode.parentNode.querySelector(".preview-image__edit").src = reader.result;
   }, false);
   reader.readAsDataURL(files[0]);
 }
@@ -91,22 +91,18 @@ function checkErrorEdit(event){
   let majorInput = a.querySelector(".select__input").value;
   let nameInput = a.querySelector(".name__input").value.replace(/\s+/g, "");
   let imageInput = a.querySelector(".input-image__edit").value;
+  let imagePreview = a.querySelector(".preview-image__edit").src;
   if (nameInput == "") {
-    // document.getElementById("name__required__edit").style.display = "block";
     a.querySelector(".name__required__edit").style.display = "block";
     count++;
   } else{
     if (nameInput.length > 10) {
-      // document.getElementById("name__required__edit").style.display = "block";
       a.querySelector(".name__required__edit").style.display = "block";
-      // document.getElementById("name__required__edit").innerHTML = "Không được nhập quá 10 kí tự";
       a.querySelector(".name__required__edit").innerHTML = "Không được nhập quá 10 kí tự";
       count++;
     } else{
         if (nameInput.charAt(0).search(/\d/) == 0) {
-          // document.getElementById("name__required__edit").style.display = "block";
           a.querySelector(".name__required__edit").style.display = "block";
-          // document.getElementById("name__required__edit").innerHTML = "Tên không được bắt đầu bằng số";
           a.querySelector(".name__required__edit").innerHTML = "Tên không được bắt đầu bằng số";
           count++;
         } else{
@@ -115,27 +111,24 @@ function checkErrorEdit(event){
       }
     }
   if (majorInput == "Mở để chọn chuyên ngành") {
-    // document.getElementById("major__required__edit").style.display = "block";
     a.querySelector(".major__required__edit").style.display = "block";
     count++;
   } else{
-    // document.getElementById("major__required__edit").style.display = "none";
     a.querySelector(".major__required__edit").style.display = "none";
   }
+  // if(imagePreview != ""){
+    
+  // }
   if(imageInput == ""){
-    // document.getElementById("image__required__edit").style.display = "block";
-    a.querySelector(".image__required__edit").style.display = "block";
-    count++;
+    
   } else{
     let fsize = a.querySelector(".input-image__edit").files[0].size;
     let ftype = a.querySelector(".input-image__edit").files[0].type;
     if(fsize > 17000){
-      // document.getElementById("image__required__edit").style.display = "block";
       a.querySelector(".image__required__edit").style.display = "block";
       a.querySelector(".image__required__edit").innerHTML = "Dung lượng file vượt quá giới hạn";
       count++;
     } else{
-      console.log(ftype);
       if(ftype != 'image/png' && ftype != 'image/jepg'){
         a.querySelector(".image__required__edit").style.display = "block";
         a.querySelector(".image__required__edit").innerHTML = "File nhập không đúng";
@@ -264,6 +257,9 @@ function saveToLocalStorage(array) {
 }
 function getStudentFromLocalStorage() {
   const getStudent = JSON.parse(localStorage.getItem("key"));
+  if(getStudent == null){
+    return [];
+  }
   return getStudent;
 }
 window.onload = function () {
