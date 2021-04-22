@@ -363,12 +363,12 @@ function catogory__testimonials(c){
     document.getElementById("p__back").style.display = "flex";
     document.getElementById("p__next").style.display = "none";
     pageOne[0].style.color = "#86888f";
-    pageTwo[0].style.color = "black";
+    pageTwo[0].style.color = "var(--black-color--text)";
   }  
   if(c == "page__one" || c == "page__back"){
     document.getElementById("p__back").style.display = "none";
     document.getElementById("p__next").style.display = "flex";
-    pageOne[0].style.color = "black";
+    pageOne[0].style.color = "var(--black-color--text)";
     pageTwo[0].style.color = "#86888f";
   }
   for(let i = 0; i < x.length; i++){
@@ -378,3 +378,38 @@ function catogory__testimonials(c){
     }
   }
 }
+
+
+//change background color
+    document.addEventListener("DOMContentLoaded", function(event) {
+      
+      document.documentElement.setAttribute("data-theme", "light");
+  
+      // Get our button switcher
+      var themeSwitch = document.getElementById("theme-switch");
+      // When our button gets clicked
+      let a = true;
+      themeSwitch.onclick = function() {
+        if(a){
+          document.querySelectorAll(".icon--white").forEach((a)=>{a.style.display = "inline-block"});
+          document.querySelectorAll(".icon--black").forEach((a)=>{a.style.display = "none"});
+          document.querySelector("#theme-switch").querySelector("span").innerHTML = "Default version";
+          a = false;
+        } else{
+          document.querySelectorAll(".icon--white").forEach((a)=>{a.style.display = "none"});
+          document.querySelectorAll(".icon--black").forEach((a)=>{a.style.display = "inline-block"});
+          document.querySelector("#theme-switch").querySelector("span").innerHTML = "Dark version";
+          a = true;
+        }
+        // Get the current selected theme, on the first run
+        // it should be `light`
+        var currentTheme = document.documentElement.getAttribute("data-theme");
+  
+        // Switch between `dark` and `light`
+        var switchToTheme = currentTheme === "dark" ? "light" : "dark"
+  
+        // Set our currenet theme to the new one
+        document.documentElement.setAttribute("data-theme", switchToTheme);
+      }
+    });
+// }
