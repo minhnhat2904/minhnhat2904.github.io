@@ -263,7 +263,7 @@ function pieChart() {
       responsive: false,
       animation: {
         animateScale: true,
-        duration: 4000,
+        duration: 5000,
         ananimateRotate: true,
       },
     },
@@ -287,7 +287,7 @@ document.addEventListener("scroll", function () {
   }
 });
 //filter portfolio
-category("mot");
+category("web");
 function category(c){
   let x = document.getElementsByClassName("img");
   if(c == "all"){
