@@ -476,6 +476,7 @@ body{
     font-family: 'Poppins', sans-serif;
     color: var(--background-color);
     width: 200px;
+    text-decoration: none;
 }
 .color-orange{
     color: var(--orange-color);
@@ -1425,11 +1426,26 @@ body{
     color: white;
     margin-left: 1px;
 }
-.testimonials-detail__wrap{
+#testimonials-detail__wrap{
     width: 100%;
     height: auto;
     padding: 3.1rem 3.3rem;
     box-sizing: border-box;
+    
+}
+.ani__opacity{
+    animation: testimonials 2s ease-in-out;
+}
+@keyframes testimonials{
+    0%{
+        opacity: 0.3;
+    }
+    80%{
+        opacity: 0.3;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 .testimonials-detail__wrap h6{
     color: var(--black-color--text);
@@ -1743,6 +1759,7 @@ body{
     color: var(--text-blur-color);
     margin: auto 0;
     padding-left: 20px;
+    text-decoration: none;
 }
 .text-phone{
     color: var(--orange-color);
@@ -1823,10 +1840,13 @@ body{
     font-size: 18px;
     color: var(--black-color);
     box-sizing: border-box;
+    padding-left: 20px;
+    outline: solid 2px transparent;
 }
 .keep-in-touch__form__up input:focus{
     outline: solid 2px var(--red-color);
     background-color: var(--bg-gray-color--focus);
+    transition: 0.5s ease-in-out;
 }
 .keep-in-touch__form__ur-mess{
     width: 100%;
@@ -1855,10 +1875,12 @@ body{
     padding-bottom: 120px;
     box-sizing: border-box;
     font-size: 18px;
+    outline: solid 2px transparent;
 }
 .keep-in-touch__form__ur-mess input:focus{
     outline: solid 2px var(--red-color);
     background-color: var(--bg-gray-color--focus);
+    transition: 0.5s ease-in-out;
 }
 .keep-in-touch__form__submit--wrap{
     width: auto;

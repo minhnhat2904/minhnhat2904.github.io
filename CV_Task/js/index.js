@@ -356,6 +356,8 @@ for(let i = 0; i < btns2.length; i++){
 //filter Testimonials
 catogory__testimonials("page__one");
 function catogory__testimonials(c){
+  document.getElementById("testimonials-detail__wrap").classList.add("ani__opacity");
+  opa = "testimonials 2s ease-in-out";
   let x = document.getElementsByClassName("wrap-blogger-item");
   let pageOne = document.getElementsByClassName("p__one");
   let pageTwo = document.getElementsByClassName("p__two");
