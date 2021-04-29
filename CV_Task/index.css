@@ -1202,13 +1202,8 @@ body{
 }
 .portfolio-image .img{
     position: relative;
-    display: none;
     margin: 0 3.7px;
     animation: img-opacity 1s ease-in-out;
-}
-
-.img.show{
-    display: block;
 }
 
 
@@ -1431,11 +1426,9 @@ body{
     height: auto;
     padding: 3.1rem 3.3rem;
     box-sizing: border-box;
-    
-}
-.ani__opacity{
     animation: testimonials 2s ease-in-out;
 }
+
 @keyframes testimonials{
     0%{
         opacity: 0.3;
@@ -1936,7 +1929,7 @@ body{
 }
 .item--right{
     display: block;
-    width: 60px;
+    /* width: 60px; */
     height: auto;
     position: fixed;
     top: 40vh;
@@ -1965,7 +1958,7 @@ body{
     right: 60px;
     font-size: 10px;
     font-weight: 900;
-    padding: 1.53rem 2rem;
+    padding: 1.53rem 1.4rem;
     font-family: initial;
     animation:  cart-run 0.5s ease-in-out;
     display: none;
@@ -1979,15 +1972,23 @@ body{
     display: inline-block;
     right: 60px;
 }
+.cart:hover{
+    width: 70px;
+    transition: 0.3s ease-in-out;
+}
+
+
 @keyframes cart-run {
     0%{
         right: 0;
+        opacity: 0;
     }
     50%{
-        right: 61px;
+        right: 71px;
     }
     100%{
-        right: 61px;
+        right: 71px;
+        opacity: 1;
     }
 }
 .bestseller{
@@ -1998,7 +1999,7 @@ body{
     position: absolute;
     top:62px;
     right: 0px;
-    width: 100%;
+    width: 60px;
     height: 60px;
     cursor: pointer;
 }
@@ -2012,7 +2013,7 @@ body{
     right: 60px;
     font-size: 10px;
     font-weight: 900;
-    padding: 1.53rem 2rem;
+    padding: 1.53rem 1.4rem;
     font-family: initial;
     animation:  bestseller-run 0.5s ease-in-out;
     display: none;
@@ -2026,15 +2027,22 @@ body{
     display: inline-block;
     right: 60px;
 }
+.bestseller:hover{
+    width: 70px;
+    transition: 0.3s ease-in-out;
+}
 @keyframes bestseller-run {
     0%{
         right: 0;
+        opacity: 0;
+
     }
     50%{
-        right: 61px;
+        right: 71px;
     }
     100%{
-        right: 61px;
+        right: 71px;
+        opacity: 1;
     }
 }
 .hide-panel{
@@ -2045,7 +2053,7 @@ body{
     position: absolute;
     top:124px;
     right: 0px;
-    width: 100%;
+    width: 60px;
     height: 60px;
     cursor: pointer;
 
@@ -2060,7 +2068,7 @@ body{
     top: 0;
     font-size: 10px;
     font-weight: 900;
-    padding: 1.53rem 2rem;
+    padding: 1.53rem 1.4rem;
     font-family: initial;
     animation:  hide-panel-run 0.5s ease-in-out;
     display: none;
@@ -2074,15 +2082,21 @@ body{
     display: inline-block;
     right: 60px;
 }
+.hide-panel:hover{
+    width: 70px;
+    transition: 0.3s ease-in-out;
+}
 @keyframes hide-panel-run {
     0%{
         right: 0;
+        opacity: 0;
     }
     50%{
-        right: 61px;
+        right: 71px;
     }
     100%{
-        right: 61px;
+        right: 71px;
+        opacity: 1;
     }
 }
 .copyright{

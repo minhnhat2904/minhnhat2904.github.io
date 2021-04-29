@@ -124,6 +124,7 @@ document.getElementById("icon-portfolio").onclick = function () {
     c_title.style.display = "flex";
     a_w.style.display = "flex";
     pf_user.style.display = "none";
+    category("web");
   }
 };
 document.getElementById("portfolio__title").onclick = function () {
@@ -287,25 +288,103 @@ document.addEventListener("scroll", function () {
   }
 });
 //filter portfolio
-category("web");
-function category(c){
-  let x = document.getElementsByClassName("img");
-  if(c == "all"){
-    c = "mot";
+function category(c) {
+  if (c == "all") {
+    document.getElementById("wrap-portfolio__page-number").style.display =
+      "flex";
+  } else {
+    document.getElementById("wrap-portfolio__page-number").style.display =
+      "none";
   }
-  if(c != "mot" && c != "hai"){
-    document.getElementById("wrap-portfolio__page-number").style.display = "none";
-  } else{
-    document.getElementById("wrap-portfolio__page-number").style.display = "flex";
+
+  switch (c) {
+    case "all":
+      $(".portfolio-image").isotope({ filter: ".mot" });
+      break;
+    case "mot":
+      $(".portfolio-image").isotope({ filter: ".mot" });
+      document.getElementById("wrap-portfolio__page-number").style.display =
+        "flex";
+      break;
+    case "hai":
+      $(".portfolio-image").isotope({ filter: ".hai" });
+      document.getElementById("wrap-portfolio__page-number").style.display =
+        "flex";
+      break;
+    case "web":
+      $(".portfolio-image").isotope({ filter: ".web" });
+      break;
+    case "video":
+      $(".portfolio-image").isotope({
+        filter: ".video",
+        transitionDuration: 1000,
+        hiddenStyle: {
+          opacity: 0,
+        },
+        visibleStyle: {
+          opacity: 1,
+        },
+      });
+      break;
+    case "photo":
+      $(".portfolio-image").isotope({ filter: ".photo" });
+      break;
+    case "graphic":
+      $(".portfolio-image").isotope({ filter: ".graphic" });
+      break;
   }
-  for(let i = 0; i < x.length; i++){
-    removeClass(x[i],"show");
-    if (x[i].className.indexOf(c) > -1){
+}
+
+var btnContainer1 = document.getElementById("portfolio-nav");
+var btns1 = btnContainer1.getElementsByClassName("filter-item");
+var btnContainer2 = document.getElementById("wrap-portfolio__page-number");
+var btns2 = btnContainer2.getElementsByClassName("portfolio__page");
+
+for (let i = 0; i < btns1.length; i++) {
+  btns1[i].addEventListener("click", function () {
+    if (i == 0) {
+      btns2[0].className += " active__page";
+      btns2[1].className = "portfolio__page portfolio__page2";
+    }
+
+    let current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+for (let i = 0; i < btns2.length; i++) {
+  btns2[i].addEventListener("click", function () {
+    let current = document.getElementsByClassName("active__page");
+    current[0].className = current[0].className.replace(" active__page", "");
+    this.className += " active__page";
+  });
+}
+
+//filter Testimonials
+catogory__testimonials("page__one");
+function catogory__testimonials(c) {
+  let x = document.getElementsByClassName("wrap-blogger-item");
+  let pageOne = document.getElementsByClassName("p__one");
+  let pageTwo = document.getElementsByClassName("p__two");
+  if (c == "page__two" || c == "page__next") {
+    document.getElementById("p__back").style.display = "flex";
+    document.getElementById("p__next").style.display = "none";
+    pageOne[0].style.color = "#86888f";
+    pageTwo[0].style.color = "var(--black-color--text)";
+  }
+  if (c == "page__one" || c == "page__back") {
+    document.getElementById("p__back").style.display = "none";
+    document.getElementById("p__next").style.display = "flex";
+    pageOne[0].style.color = "var(--black-color--text)";
+    pageTwo[0].style.color = "#86888f";
+  }
+  for (let i = 0; i < x.length; i++) {
+    removeClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) {
       addClass(x[i], "show");
     }
   }
 }
-
 function addClass(element, name) {
   var i, arr1, arr2;
   arr1 = element.className.split(" ");
@@ -328,90 +407,46 @@ function removeClass(element, name) {
   element.className = arr1.join(" ");
 }
 
-var btnContainer1 = document.getElementById("portfolio-nav");
-var btns1 = btnContainer1.getElementsByClassName("filter-item");
-var btnContainer2 = document.getElementById("wrap-portfolio__page-number");
-var btns2 = btnContainer2.getElementsByClassName("portfolio__page");
-
-for (let i = 0; i < btns1.length; i++) {
-  btns1[i].addEventListener("click", function () {
-  if(i == 0){
-    btns2[0].className += " active__page";
-    btns2[1].className = "portfolio__page portfolio__page2";
-  }
-  
-  let current = document.getElementsByClassName("active");
-  current[0].className = current[0].className.replace(" active", "");
-  this.className += " active";
-  });
-}
-for(let i = 0; i < btns2.length; i++){
-  btns2[i].addEventListener("click", function () {
-    let current = document.getElementsByClassName("active__page");
-    current[0].className = current[0].className.replace(" active__page", "");
-    this.className += " active__page";
-  });
-}
-
-//filter Testimonials
-catogory__testimonials("page__one");
-function catogory__testimonials(c){
-  document.getElementById("testimonials-detail__wrap").classList.add("ani__opacity");
-  opa = "testimonials 2s ease-in-out";
-  let x = document.getElementsByClassName("wrap-blogger-item");
-  let pageOne = document.getElementsByClassName("p__one");
-  let pageTwo = document.getElementsByClassName("p__two");
-  if(c == "page__two" || c == "page__next"){
-    document.getElementById("p__back").style.display = "flex";
-    document.getElementById("p__next").style.display = "none";
-    pageOne[0].style.color = "#86888f";
-    pageTwo[0].style.color = "var(--black-color--text)";
-  }  
-  if(c == "page__one" || c == "page__back"){
-    document.getElementById("p__back").style.display = "none";
-    document.getElementById("p__next").style.display = "flex";
-    pageOne[0].style.color = "var(--black-color--text)";
-    pageTwo[0].style.color = "#86888f";
-  }
-  for(let i = 0; i < x.length; i++){
-    removeClass(x[i],"show");
-    if (x[i].className.indexOf(c) > -1){
-      addClass(x[i], "show");
-    }
-  }
-}
-
 
 //change background color
-    document.addEventListener("DOMContentLoaded", function(event) {
-      
-      document.documentElement.setAttribute("data-theme", "light");
-  
-      // Get our button switcher
-      var themeSwitch = document.getElementById("theme-switch");
-      // When our button gets clicked
-      let a = true;
-      themeSwitch.onclick = function() {
-        if(a){
-          document.querySelectorAll(".icon--white").forEach((a)=>{a.style.display = "inline-block"});
-          document.querySelectorAll(".icon--black").forEach((a)=>{a.style.display = "none"});
-          document.querySelector("#theme-switch").querySelector("span").innerHTML = "Default version";
-          a = false;
-        } else{
-          document.querySelectorAll(".icon--white").forEach((a)=>{a.style.display = "none"});
-          document.querySelectorAll(".icon--black").forEach((a)=>{a.style.display = "inline-block"});
-          document.querySelector("#theme-switch").querySelector("span").innerHTML = "Dark version";
-          a = true;
-        }
-        // Get the current selected theme, on the first run
-        // it should be `light`
-        var currentTheme = document.documentElement.getAttribute("data-theme");
-  
-        // Switch between `dark` and `light`
-        var switchToTheme = currentTheme === "dark" ? "light" : "dark"
-  
-        // Set our currenet theme to the new one
-        document.documentElement.setAttribute("data-theme", switchToTheme);
-      }
-    });
+document.addEventListener("DOMContentLoaded", function (event) {
+  document.documentElement.setAttribute("data-theme", "light");
+
+  // Get our button switcher
+  var themeSwitch = document.getElementById("theme-switch");
+  // When our button gets clicked
+  let a = true;
+  themeSwitch.onclick = function () {
+    if (a) {
+      document.querySelectorAll(".icon--white").forEach((a) => {
+        a.style.display = "inline-block";
+      });
+      document.querySelectorAll(".icon--black").forEach((a) => {
+        a.style.display = "none";
+      });
+      document.querySelector("#theme-switch").querySelector("span").innerHTML =
+        "Default version";
+      a = false;
+    } else {
+      document.querySelectorAll(".icon--white").forEach((a) => {
+        a.style.display = "none";
+      });
+      document.querySelectorAll(".icon--black").forEach((a) => {
+        a.style.display = "inline-block";
+      });
+      document.querySelector("#theme-switch").querySelector("span").innerHTML =
+        "Dark version";
+      a = true;
+    }
+    // Get the current selected theme, on the first run
+    // it should be `light`
+    var currentTheme = document.documentElement.getAttribute("data-theme");
+
+    // Switch between `dark` and `light`
+    var switchToTheme = currentTheme === "dark" ? "light" : "dark";
+
+    // Set our currenet theme to the new one
+    document.documentElement.setAttribute("data-theme", switchToTheme);
+  };
+});
 // }
