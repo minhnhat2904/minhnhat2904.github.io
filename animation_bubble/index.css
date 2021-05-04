@@ -9,7 +9,8 @@ body{
 .background{
     width: 100%;
     height: 100%;
-    background-image: url("./image/abstract-water-hd.svg");
+    background-image: url("./image/backgroud.jpg");
+    background-size: cover;
     position: absolute;
     z-index: 0;
     overflow: hidden;
@@ -19,11 +20,11 @@ body{
 .bubble{
     position: absolute;
     bottom: -60px;
-    background-color: rgba(255, 255, 255, 0.76);
-    border: solid 2px rgba(0, 255, 255, 0.582);
+    background-color: white;
     border-radius: 50%;
-    opacity: 0.5;
+    opacity: 1;
     animation: bubbleFly 10s infinite ease-in-out;
+    box-shadow: 14px 0px 20px 11px rgb(52, 153, 248) inset;;
 }
 .bubble:nth-child(1){
     width: 40px;
@@ -103,7 +104,7 @@ body{
         transform: translateX(70px);
     }
     90%{
-        opacity: 0.2;
+        opacity: 0.5;
     }
     100%{
         opacity: 0;
