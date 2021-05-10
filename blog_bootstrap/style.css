@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+.navbar-light .navbar-nav .nav-link {
+    color: black !important;
+    font-size: 14px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease-in-out;
+}
+.nav-link:hover{
+    border-bottom: 3px solid blue !important;
+}
+#blog-page{
+    width: 110px;
+    border-bottom:solid 2px  blue;
+}
+.btn_card{
+    border-radius: 0 !important;
+}
+.btn_card:focus{
+    box-shadow: none !important;
+}
+.btn_card:hover{
+    background-color: white !important;
+    border: solid 1px black !important;
+    color: black !important;
+}
+.card:hover{
+    box-shadow: 0 5px 15px rgb(0 0 0 / 30%) !important;
+}
+.fab:hover{
+    color: blue !important;
+}
+.btn_nav:focus{
+    box-shadow: none !important;
+}
+.nav_bar{
+    box-shadow: 0 0 7px rgb(0 0 0 / 30%) !important;
+}
+.post-meta{
+    list-style-type: none !important;
+}
+.btn_blog_search{
+    border-radius: 0 20px 20px 0px !important;
+}
